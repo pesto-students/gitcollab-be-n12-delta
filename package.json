@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server",
-    "data:import": "node backend/seeder",
+    "data:import": "node seeder",
     "data:destroy": "node backend/seeder -d"
   },
   "author": "Brad Traversy",
