@@ -12,7 +12,7 @@ import userRoutes from "./routes/userRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
-
+import stripeRoutes from './routes/stripeRoutes.js'
 dotenv.config();
 
 connectDB();
@@ -31,6 +31,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/contacts", contactRoutes);
 app.use("/api/upload", uploadRoutes);
+app.use("/api/stripe", stripeRoutes);
 
 // app.get("/api/config/paypal", (req, res) =>
 //   res.send(process.env.PAYPAL_CLIENT_ID)
@@ -46,9 +47,9 @@ app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 //     res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
 //   );
 // } else {
-  app.get("/", (req, res) => {
-    res.send("API is running....");
-  });
+app.get("/", (req, res) => {
+  res.send("API is running....");
+});
 // }
 
 app.use(notFound);

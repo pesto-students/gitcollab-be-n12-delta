@@ -14,16 +14,18 @@
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.21.0",
     "colors": "^1.4.0",
+    "cors": "*",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "cloudinary": "^1.21.0",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.6",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
-    "cors": "*"
+    "stripe": "^8.200.0",
+    "uuidv4": "^6.2.12"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
