@@ -3,7 +3,12 @@ import asyncHandler from "express-async-handler";
 // const stripe = require("stripe")("sk_test_51HYmaBJSHnaZ7WbAbM2E7JEL9jSFN67HEou5F8vBRq6TFEXQpF2JpEtxj7G4zoixWLlwiN8gaBuFejN0ZwDcRXac0034sixcy6");
 import Stripe from 'stripe';
 const stripe = new Stripe('sk_test_51HYmaBJSHnaZ7WbAbM2E7JEL9jSFN67HEou5F8vBRq6TFEXQpF2JpEtxj7G4zoixWLlwiN8gaBuFejN0ZwDcRXac0034sixcy6');
-import { uuid } from 'uuidv4';
+// import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
+
+
+
+
 // @desc    Fetch all categories
 // @route   GET /api/categories
 // @access  Public
@@ -20,14 +25,14 @@ const checkout = asyncHandler(async (req, res) => {
             source: token.id
         });
 
-        const idempotency_key = uuid();
-        const charge = await stripe.charges.create(
+        const idempotencyKey = uuidv4();
+        const stripeResponse = await stripe.charges.create(
             {
-                amount: product.price,
+                amount: product.price * 100,
                 currency: "inr",
                 customer: customer.id,
                 receipt_email: token.email,
-                description: `Purchased the aaa`,
+                description: `Pharma products purchased`,
                 // shipping: {
                 //     name: token.card.name,
                 //     // address: {
@@ -40,17 +45,23 @@ const checkout = asyncHandler(async (req, res) => {
                 // }
             },
             {
-                idempotency_key
+                idempotencyKey
             }
         );
-        console.log("Charge:", { charge });
         status = "success";
+        let data = {
+            id: stripeResponse.id,
+            status: stripeResponse.status,
+            email_address: stripeResponse.receipt_email,
+            update_time: "",
+            paid: stripeResponse.paid
+        }
+        res.send(data);
     } catch (error) {
         console.error("Error:", error);
         status = "failure";
     }
 
-    res.json({ error, status });
 });
 
 
