@@ -1,4 +1,139 @@
-# PharmaCare - An Online Pharma Store
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+    <img src="https://i.pinimg.com/originals/e8/43/db/e843db188492b90bf31c5ce26871bec2.jpg" alt="Logo" width="400" height="200" >
+</p>
+Pesto Pharma team is proudly launching its own Online Pharma Store **PharmaCare**. The store will sell major pharma products like covid Essesntials, BodyCare, Vitamins & Supplements, Ayurveda Products.
+
+
+Welcome! we hope you enjoy the site as much as we enjoyed making it.
+ 
+  
+<!-- TABLE OF CONTENTS -->
+<br/>
+
+# Table of Contents
+
+1. [Demo](#demo)
+2. [Installation](#installation)
+3. [Technology Stack](#technology-stack)
+4. [Authors](#authors)
+5. [License](#license)
+
+<br/>
+
+# Demo
+
+[Live Demo](https://pharma-pesto-frontend.web.app/)
+
+<br/>
+
+Please Note:
+
+1. We recommend using this app in Google Chrome
+2. Use the app on Laptop/desktop only as of now.
+
+
+<br/>
+Test Credentials:
+
+- For User
+ 	 - Phone Number: john@example.com
+ 	 - Password: 123456
+- For Admin
+	- Phone Number: admin@example.com
+  	- Password: 123456
+<br/>
+
+# Installation
+
+1. Clone the repo
+    ```sh
+    git clonehttps://github.com/pesto-students/gitcollab-be-n12-delta Pharma-Be
+    ```
+2. Set environment variables
+
+REACT_APP_SERVER_URL=https://pharmapestobackend.herokuapp.com/api<br />
+REACT_APP_ORG_ID=<br />
+REACT_APP_DYTE_URL=<br />
+REACT_APP_FIREBASE_API=<br />
+REACT_APP_AUTH_DOMAIN=<br />
+REACT_APP_PROJECT_ID=<br />
+REACT_APP_STORAGE_BUCKET=<br />
+REACT_APP_MESSAGING_SENDER_ID=<br />
+REACT_APP_APP_ID=<br />
+REACT_APP_MEASUREMENT_ID=<br />
+REACT_APP_PAY_ID=<br />
+
+3. Install NPM packages
+    ```sh
+    cd l-be-n10-eta && npm install
+    ```
+4. Run
+    ```sh
+    npm start
+    ```
+5. Open http://localhost:3000 to view it in the browser
+
+6. Run Test cases
+    ```sh
+    npm test
+    ```
+<br/>
+
+# Technology Stack
+
+We tried to use a completely modern tech stack while testing out some new technologies that we had never used before. This resulted in a fast, performant, and easily-extensible web app that should be fairly future-proof for the coming next several years. We used:
+
+- [Node.js](https://nodejs.org/en/)
+- [Axios](https://axios-http.com/docs/intro)
+- [React](https://reactjs.org/)
+
+<br/>
+
+# Authors
+
+- [Sumit Arora](https://github.com/sumitArora2)
+- [EShree Harsha](https://github.com/sree-harsha-e)
+
+
+<br/>
+
+# License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- # PharmaCare - An Online Pharma Store
 
 Pesto Pharma team is proudly launching its own Online Pharma Store **PharmaCare**. The store will sell major pharma products like covid Essesntials, BodyCare, Vitamins & Supplements, Ayurveda Products.
 
@@ -165,4 +300,4 @@ If user visits homepage, show login/signup page
 
   _PDF Invoice Details:_ Company Details, User Details, Total Actual Price, Delivery Charges, Total Calculated Amount, Discount, Order Date, Shipping address, Billing address, Payment Method used, Payment Date.
 
-  Send email on order delivery of individual product with order details.
+  Send email on order delivery of individual product with order details. -->
